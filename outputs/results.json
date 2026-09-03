@@ -1,0 +1,57 @@
+{
+  "accuracy": 0.9624134520276953,
+  "classes": [
+    "black_rot",
+    "cedar_apple_rust",
+    "healthy",
+    "scab"
+  ],
+  "train_samples": 4041,
+  "test_samples": 1011,
+  "classification_report": {
+    "black_rot": {
+      "precision": 0.975103734439834,
+      "recall": 0.9437751004016064,
+      "f1-score": 0.9591836734693877,
+      "support": 249.0
+    },
+    "cedar_apple_rust": {
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "f1-score": 0.9523809523809523,
+      "support": 110.0
+    },
+    "healthy": {
+      "precision": 0.9468599033816425,
+      "recall": 0.98,
+      "f1-score": 0.9631449631449631,
+      "support": 400.0
+    },
+    "scab": {
+      "precision": 0.9609375,
+      "recall": 0.9761904761904762,
+      "f1-score": 0.968503937007874,
+      "support": 252.0
+    },
+    "accuracy": 0.9624134520276953,
+    "macro avg": {
+      "precision": 0.9707252844553691,
+      "recall": 0.9522641214207479,
+      "f1-score": 0.9608033815007944,
+      "support": 1011.0
+    },
+    "weighted avg": {
+      "precision": 0.963106865705416,
+      "recall": 0.9624134520276953,
+      "f1-score": 0.9623339434616734,
+      "support": 1011.0
+    }
+  },
+  "image_size": [
+    128,
+    128
+  ],
+  "feature": "HOG",
+  "svm_kernel": "RBF",
+  "C": 10
+}

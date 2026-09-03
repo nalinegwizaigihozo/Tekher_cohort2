@@ -1,0 +1,94 @@
+LIVE DEMO SPEAKER NOTES
+=======================
+
+OPENING
+-------
+"Good morning. My project is AI-Based Crop Disease Classification using SVM.
+The goal is to classify an apple leaf image into healthy, apple scab, black
+rot, or cedar apple rust."
+
+DATASET
+-------
+Show the data/apple folders.
+
+Say:
+"The dataset is organized into four labeled folders. Each folder contains
+images belonging to one class."
+
+CODE
+----
+Open train_svm.py and point to:
+
+1. extract_features()
+2. load_images()
+3. train_test_split()
+4. Pipeline with StandardScaler and SVC
+5. model.fit()
+6. model.predict()
+
+Say:
+"First, the images are converted into HOG numerical features. Then I split
+the data into training and testing sets. The SVM is trained on the training
+features and evaluated on unseen test images."
+
+RUN
+---
+Terminal:
+python train_svm.py --data data/apple --max-per-class 1000
+
+Say:
+"The program now trains the model. I will use the actual accuracy printed by
+the program rather than a value prepared in advance."
+
+RESULTS
+-------
+Open:
+outputs/confusion_matrix.png
+
+Say:
+"This confusion matrix shows which classes were predicted correctly and which
+classes were confused with one another."
+
+LIVE PREDICTION
+---------------
+Terminal:
+streamlit run app.py
+
+Upload a leaf image.
+
+Say:
+"Now I will test the model with a new image. The image goes through the same
+preprocessing and HOG feature extraction. The trained SVM then predicts the
+class."
+
+Point to:
+- Prediction
+- Confidence scores
+- Explanation
+
+CLOSING
+-------
+"The main idea is simple: convert the leaf image into useful numerical
+features, train the SVM to learn boundaries between the classes, and use the
+trained model to classify a new leaf image."
+
+COMMON QUESTIONS
+----------------
+Q: Why SVM?
+A: "SVM is a supervised classifier that works well with high-dimensional
+feature spaces and can learn non-linear boundaries using kernels."
+
+Q: Why HOG?
+A: "HOG converts visual information such as local edge and shape patterns
+into numerical features that an SVM can process."
+
+Q: What if the image is completely different from the training data?
+A: "The prediction may be less reliable. The model learns patterns from its
+training distribution, so real-world images can produce different results."
+
+Q: What does the confusion matrix show?
+A: "It compares the true class with the predicted class. Correct predictions
+appear on the diagonal; off-diagonal values represent mistakes."
+
+Q: What is 80/20?
+A: "80 percent of the data is used for training and 20 percent for testing."
