@@ -166,13 +166,4 @@ Performance on real farm photographs can therefore be different. This demo is
 for classification and education; it is not a replacement for professional
 plant-disease diagnosis.
 
-## 10. Suggested 5–7 minute demo order
 
-1. Introduce the problem — 30 seconds
-2. Show dataset folders — 30 seconds
-3. Open `train_svm.py` — 1 minute
-4. Run training and show accuracy — 1 minute
-5. Open the confusion matrix — 30 seconds
-6. Run `streamlit run app.py` — 30 seconds
-7. Upload a leaf image and show prediction — 1 minute
-8. Explain the prediction pipeline and conclude — 30 seconds
